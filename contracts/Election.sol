@@ -1,12 +1,29 @@
-pragma solidity >= 0.4.2;
+pragma solidity >=0.4.22 <0.8.0;
 
 contract Election {
-    // store candidate 
-    // read candidate 
-    string public candidate;
+    // model a candidate
+    struct Candidate{
+        uint id;
+        string name;
+        uint voteCount;
+    }
+    
+    // store a candidate
+    // fetch a candidate
+    mapping(uint => Candidate) public candidates;
+
+    // Store a candidate count
+    uint public candidatesCount;
 
     // constructor
     constructor() public {
-        candidate = "Candidate 1";
+        addCandidate("Candidate 1");
+        addCandidate("Candidate 2");
+    }
+
+    // function to add a candidate
+    function addCandidate(string memory _name) private {
+        candidatesCount++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 }
