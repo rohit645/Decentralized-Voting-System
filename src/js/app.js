@@ -33,7 +33,7 @@ App = {
       App.render();
     });
   },
-  
+
   // Listen for events emitted from the contract
   listenForEvents: function() {
     App.contracts.Election.deployed().then(function(instance) {
@@ -125,3 +125,4 @@ $(function() {
     App.init();
   });
 });
+
