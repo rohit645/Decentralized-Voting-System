@@ -806,7 +806,7 @@ var contract = (function(module) {
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"ethjs-abi":7,"truffle-blockchain-utils":15,"web3":5}],2:[function(require,module,exports){
 var Schema = require("truffle-contract-schema");
-var Contract = require("./contract.js");
+var Contract = require("./contract.js.js");
 
 var contract = function(options) {
   options = Schema.normalizeOptions(options);
@@ -6130,7 +6130,7 @@ function isnan (val) {
 
 /* eslint-disable */
 
-var utils = require('./utils/index.js');
+var utils = require('./utils/index.js.js');
 var uint256Coder = utils.uint256Coder;
 var coderBoolean = utils.coderBoolean;
 var coderFixedBytes = utils.coderFixedBytes;
