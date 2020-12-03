@@ -15,6 +15,7 @@ class App extends React.Component {
       hasVoted: false,
       loading: true,
       voting: false,
+      loggedIn: false
     }
 
     if (typeof web3 != 'undefined') {
