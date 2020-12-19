@@ -10,6 +10,7 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
 
   devServer: {
+      historyApiFallback: true,
       contentBase: path.join(__dirname, 'src'),
       compress: true,
       port: 8080
@@ -19,7 +20,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     chunkFilename: '[id].js',
-    publicPath: ''
+    publicPath: '/'
   },
 
   resolve: {

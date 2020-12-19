@@ -73,7 +73,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} >
+          <form className={classes.form} method="GET" action="/auth">
             <TextField
               variant="outlined"
               margin="normal"
@@ -100,8 +100,7 @@ export default function SignInSide() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Link to = "/home">
-              <Button
+            <Button
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -110,7 +109,6 @@ export default function SignInSide() {
               >
                 Sign In
               </Button>
-            </Link>
             <Grid container>
               <Grid item xs>
                 <Link to="/register">

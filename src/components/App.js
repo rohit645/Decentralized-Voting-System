@@ -17,7 +17,7 @@ class App extends React.Component {
       voting: false,
       loggedIn: false
     }
-
+    
     if (typeof web3 != 'undefined') {
       this.web3Provider = web3.currentProvider
     } else {
@@ -74,7 +74,8 @@ class App extends React.Component {
 
   castVote(candidateId) {
     this.setState({ voting: true })
-    this.electionInstance.vote(candidateId, { from: this.state.account }).then((result) =>
+    this.electionInstance.vote(candidateId, { from: this.state.account })
+    .then((result) =>
       this.setState({ hasVoted: true })
     )
   }
