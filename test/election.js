@@ -61,6 +61,4 @@ contract("Election", function(accounts){
             assert.equal(voteCount, 0, 'candidate 2 did not recieve any votes');
         })
     });
-    
-    
 })

@@ -115,7 +115,7 @@ class Auth extends React.Component {
                     >
                     Enter
                     </Button>
-                    </Link>
+                </Link>
                 }
         </div>
         ) 

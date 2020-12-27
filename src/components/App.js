@@ -1,10 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Web3 from 'web3'
 import TruffleContract from 'truffle-contract'
 import Election from '../../build/contracts/Election.json'
 import Content from './Content'
 import 'bootstrap/dist/css/bootstrap.css'
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
 
 class App extends React.Component {
   constructor(props) {
@@ -95,6 +96,17 @@ class App extends React.Component {
                 castVote={this.castVote} 
               />
           }
+          <Link to="/">
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              onClick={this.sendEmail}
+              >
+              Sign Out
+            </Button>
+          </Link>
         </div>
       </div>
     )

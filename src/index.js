@@ -6,6 +6,7 @@ import Register from './components/Register/Register'
 import Auth from './components/Auth/Auth'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 
+
 const routing = (
   <Router>
       <Switch>
